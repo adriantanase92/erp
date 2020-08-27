@@ -28,3 +28,134 @@
   @include angular-material-theme($my-black-theme);
   @include custom-components-theme($my-black-theme);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Please make this profi
+
+// Helper Classes
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.spacer { flex: 1 1 auto; }
+
+// General Classes
+html, body, .my-light-theme, .my-dark-theme { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+:host { display: flex; flex-direction: column; height: 100%; }
+
+// Wrapper
+.c-wrapper {
+  height: 100%;
+}
+
+// Header
+.c-main-header {
+  background: #fff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+
+  .mat-badge-small {
+    &.mat-badge-overlap {
+      &.mat-badge-after {
+        .mat-badge-content {
+          right: 0px;
+          top: 2px;
+        }
+      }
+    }
+  }
+}
+
+// Footer
+.c-main-footer {
+  padding: 4px;
+  color: #777777;
+  font-size: 12px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+// Sidebar
+.c-sidebar {
+  width: 200px;
+
+  &.minimize {
+    width: 60px;
+
+    .c-mini-profile {
+      img {
+        height: auto;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+// Content
+.c-main-content {
+  background: #fff;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+// Features
+.c-mini-profile {
+  text-align: center;
+
+  &.mat-card {
+    &:not([class*=mat-elevation-z]) {
+      box-shadow: unset;
+    }
+  }
+
+  img {
+    border-radius: 50%;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+}
+
+.c-vertical-menu {
+  &.mat-list-base {
+    padding: 0;
+    height: 100%;
+
+    .mat-list-item {
+      .mat-list-item-content {
+        padding: 0;
+
+        .mat-button {
+          padding: 0 16px;
+          width: 100%;
+          min-width: 100%;
+          height: 100%;
+          line-height: 48px;
+          display: block;
+          text-align: left;
+
+          .mat-icon {
+            margin-right: 10%;
+          }
+        }
+      }
+
+      &.c-divided-item {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+}

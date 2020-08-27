@@ -1,12 +1,13 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
+  showOnlyIcons = false;
+
   constructor() {}
 
   ngOnInit(): void {}
