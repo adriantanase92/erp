@@ -10,7 +10,7 @@ interface LoginContextInterface {
 }
 
 const defaultUser = {
-  username: 'Mathis',
+  username: 'admin',
   password: '12345',
   token: '12345'
 };
