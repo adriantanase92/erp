@@ -14,7 +14,7 @@
   <mat-divider></mat-divider>
   <mat-list class="c-vertical-menu">
     <mat-list-item>
-      <a mat-button [matTooltip]="showOnlyIcons ? 'Dashboard' : ''" matTooltipPosition="after" [routerLink]="['/']"><mat-icon>dashboard</mat-icon> <span *ngIf="!showOnlyIcons">Dashboard</span></a>
+      <a mat-button [matTooltip]="showOnlyIcons ? 'Dashboard' : ''" matTooltipPosition="after" [routerLink]="['/dashboard']"><mat-icon>dashboard</mat-icon> <span *ngIf="!showOnlyIcons">Dashboard</span></a>
     </mat-list-item>
     <mat-list-item>
       <a mat-button [matTooltip]="showOnlyIcons ? 'Tasks' : ''" matTooltipPosition="after" [routerLink]="['/tasks']"><mat-icon>assignment_turned_in</mat-icon> <span *ngIf="!showOnlyIcons">Tasks</span></a>
@@ -29,13 +29,13 @@
       <a mat-button [matTooltip]="showOnlyIcons ? 'Clients' : ''" matTooltipPosition="after" [routerLink]="['/clients']"><mat-icon>people</mat-icon> <span *ngIf="!showOnlyIcons">Clients</span></a>
     </mat-list-item>
     <mat-list-item>
-      <a mat-button [matTooltip]="showOnlyIcons ? 'Reports' : ''" matTooltipPosition="after" [routerLink]="['#']"><mat-icon>content_paste</mat-icon> <span *ngIf="!showOnlyIcons">Reports</span></a>
+      <a mat-button [matTooltip]="showOnlyIcons ? 'Reports' : ''" matTooltipPosition="after" [routerLink]="['/reports']"><mat-icon>content_paste</mat-icon> <span *ngIf="!showOnlyIcons">Reports</span></a>
     </mat-list-item>
     <mat-list-item>
-      <a mat-button [matTooltip]="showOnlyIcons ? 'Financial' : ''" matTooltipPosition="after" [routerLink]="['#']"><mat-icon>table_view</mat-icon> <span *ngIf="!showOnlyIcons">Financial</span></a>
+      <a mat-button [matTooltip]="showOnlyIcons ? 'Financial' : ''" matTooltipPosition="after" [routerLink]="['/financial']"><mat-icon>table_view</mat-icon> <span *ngIf="!showOnlyIcons">Financial</span></a>
     </mat-list-item>
     <mat-list-item>
-      <a mat-button [matTooltip]="showOnlyIcons ? 'Settings' : ''" matTooltipPosition="after" [routerLink]="['#']"><mat-icon>settings</mat-icon> <span *ngIf="!showOnlyIcons">Settings</span></a>
+      <a mat-button [matTooltip]="showOnlyIcons ? 'Settings' : ''" matTooltipPosition="after" [routerLink]="['/settings']"><mat-icon>settings</mat-icon> <span *ngIf="!showOnlyIcons">Settings</span></a>
     </mat-list-item>
     <mat-divider></mat-divider>
     <mat-list-item class="c-divided-item">
