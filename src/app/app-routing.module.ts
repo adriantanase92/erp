@@ -46,6 +46,11 @@ const routes: Routes = [
           import('@modules/reports/reports.module').then(m => m.ReportsModule)
       },
       {
+        path: 'financial',
+        loadChildren: () =>
+          import('@modules/financial/financial.module').then(m => m.FinancialModule)
+      },
+      {
         path: 'settings',
         loadChildren: () =>
           import('@modules/settings/settings.module').then(m => m.SettingsModule)
