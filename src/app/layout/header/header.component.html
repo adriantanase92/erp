@@ -1,1 +1,14 @@
-<p>header works!</p>
+<mat-toolbar color="primary" class="c-main-header">
+  <mat-toolbar-row>
+    <span>Light ERP</span>
+    <span class="spacer"></span>
+    <mat-slide-toggle [checked]="isDarkTheme$ | async" (change)="toggleTheme($event.checked)">Toggle Theme</mat-slide-toggle>
+    <button class="header-btn" mat-icon-button color="white" matBadge="8" matBadgeSize="small" matBadgeColor="accent">
+      <mat-icon>notifications</mat-icon>
+    </button>
+    <button mat-icon-button color="white" matBadge="8" matBadgeSize="small" matBadgeColor="accent">
+      <mat-icon>email</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+

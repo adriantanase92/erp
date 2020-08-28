@@ -1,13 +1,27 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { environment } from '@env';
+import { Observable } from 'rxjs';
+import { ThemeService } from 'app/core/service/theme.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
+  public version = environment.version;
+  public isDarkTheme$: Observable<boolean>;
 
-  ngOnInit(): void {}
+  constructor(
+    private themeService: ThemeService
+  ) {}
+
+  ngOnInit() {
+    this.isDarkTheme$ = this.themeService.getDarkTheme();
+  }
+
+  toggleTheme(checked: boolean) {
+    this.themeService.setDarkTheme(checked);
+  }
 }

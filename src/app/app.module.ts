@@ -10,7 +10,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { ContentLayoutComponent } from './layout/content-layout/content-layout.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
-import { NavComponent } from './layout/nav/nav.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
 import { AuthModule } from '@modules/auth/auth.module';
@@ -21,7 +20,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   declarations: [
     AppComponent,
     ContentLayoutComponent,
-    NavComponent,
     FooterComponent,
     HeaderComponent,
     SidebarComponent,

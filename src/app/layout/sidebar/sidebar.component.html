@@ -1,1 +1,45 @@
-<p>sidebar works!</p>
+<aside class="c-sidebar" [ngClass]="{minimize: showOnlyIcons}">
+  <div [ngClass]="showOnlyIcons ? 'text-center' : 'text-right'">
+    <button mat-icon-button aria-label="Minimize sidebar" (click)="showOnlyIcons = !showOnlyIcons">
+      <mat-icon>shuffle</mat-icon>
+    </button>
+  </div>
+
+  <mat-card class="c-mini-profile">
+    <img src="assets/images/profile/profile.jpg" alt="Profile Pic">
+    <mat-card-title *ngIf="!showOnlyIcons">Jane Doe</mat-card-title>
+    <mat-card-subtitle *ngIf="!showOnlyIcons">CEO</mat-card-subtitle>
+  </mat-card>
+
+  <mat-divider></mat-divider>
+  <mat-list class="c-vertical-menu">
+    <mat-list-item>
+      <a mat-button [matTooltip]="showOnlyIcons ? 'Dashboard' : ''" matTooltipPosition="after" [routerLink]="['/']"><mat-icon>dashboard</mat-icon> <span *ngIf="!showOnlyIcons">Dashboard</span></a>
+    </mat-list-item>
+    <mat-list-item>
+      <a mat-button [matTooltip]="showOnlyIcons ? 'Tasks' : ''" matTooltipPosition="after" [routerLink]="['/tasks']"><mat-icon>assignment_turned_in</mat-icon> <span *ngIf="!showOnlyIcons">Tasks</span></a>
+    </mat-list-item>
+    <mat-list-item>
+      <a mat-button [matTooltip]="showOnlyIcons ? 'Projects' : ''" matTooltipPosition="after" [routerLink]="['/projects']"><mat-icon>extension</mat-icon> <span *ngIf="!showOnlyIcons">Projects</span></a>
+    </mat-list-item>
+    <mat-list-item>
+      <a mat-button [matTooltip]="showOnlyIcons ? 'Teams' : ''" matTooltipPosition="after" [routerLink]="['/teams']"><mat-icon>groups</mat-icon> <span *ngIf="!showOnlyIcons">Teams</span></a>
+    </mat-list-item>
+    <mat-list-item>
+      <a mat-button [matTooltip]="showOnlyIcons ? 'Clients' : ''" matTooltipPosition="after" [routerLink]="['/clients']"><mat-icon>people</mat-icon> <span *ngIf="!showOnlyIcons">Clients</span></a>
+    </mat-list-item>
+    <mat-list-item>
+      <a mat-button [matTooltip]="showOnlyIcons ? 'Reports' : ''" matTooltipPosition="after" [routerLink]="['#']"><mat-icon>content_paste</mat-icon> <span *ngIf="!showOnlyIcons">Reports</span></a>
+    </mat-list-item>
+    <mat-list-item>
+      <a mat-button [matTooltip]="showOnlyIcons ? 'Financial' : ''" matTooltipPosition="after" [routerLink]="['#']"><mat-icon>table_view</mat-icon> <span *ngIf="!showOnlyIcons">Financial</span></a>
+    </mat-list-item>
+    <mat-list-item>
+      <a mat-button [matTooltip]="showOnlyIcons ? 'Settings' : ''" matTooltipPosition="after" [routerLink]="['#']"><mat-icon>settings</mat-icon> <span *ngIf="!showOnlyIcons">Settings</span></a>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item class="c-divided-item">
+      <a mat-button [matTooltip]="showOnlyIcons ? 'Log Out' : ''" matTooltipPosition="after" [routerLink]="['#']"><mat-icon>power_settings_new</mat-icon> <span *ngIf="!showOnlyIcons">Log Out</span></a>
+    </mat-list-item>
+  </mat-list>
+</aside>

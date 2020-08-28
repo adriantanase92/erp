@@ -18,17 +18,37 @@ const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: () =>
-          import('@modules/home/home.module').then(m => m.HomeModule)
+          import('@modules/dashboard/dashboard.module').then(m => m.DashboardModule)
       },
       {
-        path: 'about',
+        path: 'tasks',
         loadChildren: () =>
-          import('@modules/about/about.module').then(m => m.AboutModule)
+          import('@modules/tasks/tasks.module').then(m => m.TasksModule)
       },
       {
-        path: 'contact',
+        path: 'projects',
         loadChildren: () =>
-          import('@modules/contact/contact.module').then(m => m.ContactModule)
+          import('@modules/projects/projects.module').then(m => m.ProjectsModule)
+      },
+      {
+        path: 'teams',
+        loadChildren: () =>
+          import('@modules/teams/teams.module').then(m => m.TeamsModule)
+      },
+      {
+        path: 'clients',
+        loadChildren: () =>
+          import('@modules/clients/clients.module').then(m => m.ClientsModule)
+      },
+      {
+        path: 'reports',
+        loadChildren: () =>
+          import('@modules/reports/reports.module').then(m => m.ReportsModule)
+      },
+      {
+        path: 'settings',
+        loadChildren: () =>
+          import('@modules/settings/settings.module').then(m => m.SettingsModule)
       }
     ]
   },

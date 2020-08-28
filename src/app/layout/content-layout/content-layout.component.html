@@ -1,11 +1,15 @@
 <div [class]="theme">
   <div class="mat-app-background">
-    <app-nav></app-nav>
+    <mat-sidenav-container class="c-wrapper" autosize>
+      <mat-sidenav mode="side" opened>
+        <app-sidebar></app-sidebar>
+      </mat-sidenav>
 
-      <div class="container">
-        <router-outlet></router-outlet>
-      </div>
-
-    <app-footer></app-footer>
+      <mat-sidenav-content>
+        <app-header></app-header>
+        <main class="c-main-content"><router-outlet></router-outlet></main>
+        <app-footer></app-footer>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
   </div>
 </div>
